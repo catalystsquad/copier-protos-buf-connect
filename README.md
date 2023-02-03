@@ -1,6 +1,6 @@
 # copier-protos-buf-connect
 
-A copier template for starting with a Buf Connect enabled repo with optional Github Actions for publishing
+A copier template for starting with a [Buf Connect](https://connect.build/) enabled repo with optional Github Actions for publishing
 
 # prerequisites
 
@@ -8,10 +8,10 @@ You will need an automation user of some kind with a token for Buf.build and NPM
 
 Secret variables will need to be named (or adjusted by you after generation):
 
-AUTOMATON_PAT
-BUF_USER
-BUF_TOKEN
-NPM_TOKEN
+- AUTOMATON_PAT
+- BUF_USER
+- BUF_TOKEN
+- NPM_TOKEN
 
 # local generation?
 
