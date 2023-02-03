@@ -1,0 +1,31 @@
+{
+  "name": "@{{organization}}/{{pkgdir}}",
+  "version": "1.0.2",
+  "description": "Some Protos for Buf Connect for {{organization}}",
+  "main": "index.js",
+  "scripts": {
+    "buf:generate": "buf generate buf.build/{{organization}}/{{pkgdir}}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{{organization}}/{{repo_name}}.git"
+  },
+  "author": "{{organization}},
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/{{organization}}/{{repo_name}}/issues"
+  },
+  "files": [
+    "gen/es/**/*"
+  ],
+  "homepage": "https://github.com/{{organization}}/{{repo_name}}#readme",
+  "type": "module",
+  "devDependencies": {
+    "@bufbuild/protoc-gen-connect-web": "^0.6.0",
+    "@bufbuild/protoc-gen-es": "^1.0.0"
+  },
+  "dependencies": {
+    "@bufbuild/connect-web": "^0.6.0",
+    "@bufbuild/protobuf": "^1.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+name: Release
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+    paths:
+      - '{{pkgdir}}/**'
+      - 'buf.gen.yaml'
+      - 'buf.work.yaml'
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Release
+    steps:
+      - uses: catalystsquad/action-semantic-release-general@v1
+        with:
+{% raw %}
+          token: ${{ secrets.AUTOMATION_PAT }}
+{% endraw %}
+          release-config: "@catalystsquad/release-config-npm-no-publish"

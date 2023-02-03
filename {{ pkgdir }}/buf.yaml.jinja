@@ -1,0 +1,12 @@
+version: v1
+name: buf.build/{{organization}}/{{repo_name}}
+deps:
+  - buf.build/googleapis/googleapis
+lint:
+  use:
+    - DEFAULT
+  except: []
+  ignore: []
+breaking:
+  use:
+    - FILE

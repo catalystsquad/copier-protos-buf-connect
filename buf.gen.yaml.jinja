@@ -1,0 +1,23 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/{{organization}}/{{repo_name}}/gen/go
+    except:
+      - buf.build/googleapis/googleapis
+plugins:
+  - remote: buf.build/library/plugins/go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - remote: buf.build/bufbuild/plugins/connect-go
+    out: gen/go
+    opt:
+      - paths=source_relative
+  - remote: buf.build/bufbuild/plugins/es
+    out: gen/es
+    opt: target=ts
+  - remote: buf.build/bufbuild/plugins/connect-web
+    out: gen/es
+    opt: target=ts
+
